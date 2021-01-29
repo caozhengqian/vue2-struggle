@@ -7,11 +7,8 @@
 // @ is an alias to /sr
 
 export default {
-  name: "Home",
-  components: {
-
-  },
-
+  name: "App",
+  components: {}
 };
 </script>
 <style>
