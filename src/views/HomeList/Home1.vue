@@ -35,7 +35,7 @@ export default {
       console.log(`%c Home1------>created2秒`, "color:#CE0000");
     }, 2000);
     home(5000).then(() => {
-      console.log(`%c Home1---------->created接口5秒`, "color:#600000");
+      console.log(`%c Home1---------->created5秒接口`, "color:#600000");
     });
   },
   beforeMount() {
@@ -43,7 +43,7 @@ export default {
     setTimeout(() => {
       console.log(`%c Home1------>beforeMount2秒`, "color:#CE0000");
     }, 2000);
-    home(5000).then(() => {
+    home(2000).then(() => {
       console.log(`%c Home1---------->beforeMount接口2秒`, "color:#600000");
     });
   },
@@ -52,7 +52,7 @@ export default {
     setTimeout(() => {
       console.log(`%c Home1------>mounted2秒`, "color:#CE0000");
     }, 2000);
-    home(5000).then(() => {
+    home(2000).then(() => {
       console.log(`%c Home1---------->mounted接口2秒`, "color:#600000");
     });
   },
@@ -61,7 +61,7 @@ export default {
     setTimeout(() => {
       console.log(`%c Home1------>beforeUpdate2秒`, "color:#CE0000");
     }, 2000);
-    home(5000).then(() => {
+    home(2000).then(() => {
       console.log(`%c Home1---------->beforeUpdate接口2秒`, "color:#600000");
     });
   },
@@ -70,7 +70,7 @@ export default {
     setTimeout(() => {
       console.log(`%c Home1------>updated2秒`, "color:#CE0000");
     }, 2000);
-    home(5000).then(() => {
+    home(2000).then(() => {
       console.log(`%c Home1---------->updated接口2秒`, "color:#600000");
     });
   },
@@ -79,7 +79,7 @@ export default {
     setTimeout(() => {
       console.log(`%c Home1------>beforeDestroy2秒`, "color:#CE0000");
     }, 2000);
-    home(5000).then(() => {
+    home(2000).then(() => {
       console.log(`%c Home1---------->beforeDestroy接口2秒`, "color:#600000");
     });
   },
@@ -88,7 +88,7 @@ export default {
     setTimeout(() => {
       console.log(`%c Home1------>destroyed2秒`, "color:#CE0000");
     }, 2000);
-    home(5000).then(() => {
+    home(2000).then(() => {
       console.log(`%c Home1---------->destroyed接口2秒`, "color:#600000");
     });
   },
