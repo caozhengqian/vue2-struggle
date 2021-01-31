@@ -1,17 +1,27 @@
 <template>
   <div class="Home2">
     <p>Home2</p>
+    <Home3For
+        v-for="(item, index) in forlist"
+        :key="index"
+        :keyValue="index"
+      >
+      {{item}}
+    </Home3For>
   </div>
 </template>
 
 <script>
 //import { mapState } from "vuex";
 //import All from "./comLife/All";
+import Home3For from "@/views/HomeList/Home3For";
+
+
 import {home} from "@/api/request";
 
 export default {
   components: {
-    //       All,
+    Home3For
   },
   name: "Home2",
   props: {
@@ -21,7 +31,9 @@ export default {
     // ...mapState(["activityData"])
   },
   data() {
-    return {};
+    return {
+      forlist:[0,1,2]
+    };
   },
 
   beforeCreate() {
@@ -52,6 +64,7 @@ export default {
     });
   },
   mounted() {
+    this.forlist = [3,4,5,6,7,8,9]
     console.log(`%c      Home2-->mounted`, "color:#afb4db");
     setTimeout(() => {
       console.log(`%c      Home2------------>mounted2秒`, "color:#4e72b8");
