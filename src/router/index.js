@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import lifeRouters from './module/lifeRouters/lifeRouters'
-import family from './module/familyRouters/familyRouters'
+import familyRouters from './module/familyRouters/familyRouters'
 Vue.use(VueRouter);
 
 const routes = [
@@ -17,7 +17,8 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
-    ...lifeRouters
+    ...lifeRouters,
+    ...familyRouters
 ];
 
 const router = new VueRouter({

@@ -1,6 +1,7 @@
 <template>
   <div class='Family'>
-    <p>Family</p>
+    <img @click="toCaoWangShi" class="img" src="./0/0/CaoWangShi/img/IMG_0531.png"/>
+
   </div>
 
 </template>
@@ -26,7 +27,8 @@ export default {
 
   },
   methods: {
-    aa() {
+    toCaoWangShi() {
+      this.$router.push({ name: "caowangshi" });
     },
   }
 
@@ -35,6 +37,11 @@ export default {
 
 <style lang="less" scoped>
 .Family {
-
+  .img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor:pointer;
+  }
 }
 </style>

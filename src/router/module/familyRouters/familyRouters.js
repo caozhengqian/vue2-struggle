@@ -7,15 +7,15 @@ const familyRouters = [
     },
     {
         name: "index",
-        path: "/life/index",
+        path: "/family/index",
         component: () =>
-            import("../../../views/life/Life")
+            import("../../../views/family/Family")
     },
     {
-        name: "simpleLife",
-        path: "/life/simpleLife",
+        name: "caowangshi",
+        path: "/family/caowangshi",
         component: () =>
-            import("../../../views/life/simpleLife/SimpleLife")
-    },
+            import("../../../views/family/0/0/CaoWangShi/CaoWangShi")
+    }
 ]
 export default familyRouters;

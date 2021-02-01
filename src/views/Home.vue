@@ -2,6 +2,7 @@
   <div class="home">
     <button @click="toLife">生命周期</button>
     <button @click="howToIntegral">样式</button>
+    <button @click="toFamily">族谱</button>
 
 <!--    <Home1 />-->
   </div>
@@ -28,6 +29,10 @@ export default {
     toLife() {
       console.log(`%c ${window}`, "color:red");
       this.$router.push({ name: "lifeRouters" });
+    },
+    toFamily() {
+      console.log(`%c ${window}`, "color:red");
+      this.$router.push({ name: "familyRouters" });
     }
   }
 };
