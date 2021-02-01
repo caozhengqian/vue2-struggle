@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import lifeRouters from './module/lifeRouters/lifeRouters'
+import family from './module/familyRouters/familyRouters'
 Vue.use(VueRouter);
 
 const routes = [
