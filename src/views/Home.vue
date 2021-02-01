@@ -1,17 +1,19 @@
 <template>
   <div class="home">
-    <button @click="howToIntegral">aaa</button>
-    <Home1 />
+    <button @click="toLife">生命周期</button>
+    <button @click="howToIntegral">样式</button>
+
+<!--    <Home1 />-->
   </div>
 </template>
 
 <script>
-import Home1 from "./HomeList/Home1";
+// import Home1 from "./HomeList/Home1";
 
 export default {
   name: "Home",
   components: {
-    Home1
+    // Home1
   },
   data() {
     return {
@@ -22,6 +24,10 @@ export default {
     howToIntegral() {
       console.log(`%c ${window}`, "color:red");
       this.$router.push({ name: "About" });
+    },
+    toLife() {
+      console.log(`%c ${window}`, "color:red");
+      this.$router.push({ name: "lifeRouters" });
     }
   }
 };

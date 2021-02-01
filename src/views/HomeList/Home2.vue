@@ -3,7 +3,7 @@
     <p>Home2</p>
     <Home3For
         v-for="(item, index) in forlist"
-        :key="index"
+        :key="item"
         :keyValue="index"
       >
       {{item}}
