@@ -6,7 +6,7 @@ const familyRouters = [
         redirect: "/family/index"
     },
     {
-        name: "index",
+        name: "familyindex",
         path: "/family/index",
         component: () =>
             import("../../../views/family/Family")
