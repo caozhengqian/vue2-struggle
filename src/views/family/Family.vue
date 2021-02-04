@@ -1,6 +1,8 @@
 <template>
   <div class='Family'>
     <img @click="toCaoWangShi" class="img" src="./0/0/CaoWangShi/img/IMG_0531.png"/>
+    <img @click="toCaoWangShi" class="img" src="./3/CaoZhengQian/img/caozhengqian.jpg"/>
+    <a-button type="primary">Button</a-button>
 
   </div>
 
