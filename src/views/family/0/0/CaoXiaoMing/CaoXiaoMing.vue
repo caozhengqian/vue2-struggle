@@ -1,6 +1,28 @@
 <template>
   <div class='CaoXiaoMing'>
-    <p>CaoXiaoMing</p>
+
+    <div class="left">
+      <a-steps direction="vertical" size="small" :current="100">
+        <a-step title="上学" description="xxx年---xxx年--学生" />
+        <a-step title="--" description="--" />
+        <a-step title="--" description="--" />
+        <a-step title="--" description="--" />
+        <a-step title="--" description="--" />
+      </a-steps>
+    </div>
+    <div class="middle">
+      <p class="one-life">一生总结</p>
+      <video style="width:300px;height:450px" controls=""  name="media"><source src="./video/caozhengqian.mp4" type="video/mp4"></video>
+      <p class="one-life">一生技术总结教程（待开发）</p>
+    </div>
+    <div class="right">
+      <span class="nian">2016年</span>
+      <div>
+        <img class="imgs" src="./img/2016/1.jpg"/>
+      </div>
+
+    </div>
+
   </div>
 
 </template>
@@ -35,6 +57,31 @@ export default {
 
 <style lang="less" scoped>
 .CaoXiaoMing {
-
+  padding:20px;
+  display: flex;
+  .left{
+    width:200px;
+  }
+  .middle{
+    width:400px;
+    display: flex;
+    flex-direction: column; //column
+    align-items: center; //flex-start、flex-end
+    .one-life{
+      text-align: center;
+      font-size: 30px;
+      color:#1890ff;
+    }
+  }
+  .right{
+    .imgs{
+      width:300px;
+      height:300px;
+      margin-right: 10px;
+    }
+    .nian{
+      font-size: 20px;
+    }
+  }
 }
 </style>

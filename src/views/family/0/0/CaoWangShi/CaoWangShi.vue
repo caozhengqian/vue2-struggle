@@ -1,6 +1,47 @@
 <template>
   <div class='CaoWangShi'>
-    <video style="margin-left:300px;width:300px;height:450px" controls=""  name="media"><source src="./video/02930943ef6e7ed80fe6a4d7fafc42ae.mp4" type="video/mp4"></video>
+    <div class="left">
+      <a-steps direction="vertical" size="small" :current="100">
+        <a-step title="相夫教子" description="1929年---2021年--相夫教子" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+        <a-step title="-暂无--" description="-暂无-" />
+      </a-steps>
+    </div>
+    <div class="middle">
+      <p class="one-life">一生总结</p>
+      <video style="width:300px;height:450px" controls=""  name="media"><source src="./video/caozhengqian.mp4" type="video/mp4"></video>
+      <p class="one-life">一生技术总结教程（待开发）</p>
+    </div>
+    <div class="right">
+      <span class="nian">2016年</span>
+      <div>
+        <img class="imgs" src="./img/2016/1.jpg"/>
+      </div>
+      <span class="nian">2017年</span>
+      <div>
+        <img class="imgs" src="./img/2017/1.jpg"/>
+      </div>
+      <span class="nian">2018年</span>
+      <div>
+        <img class="imgs" src="./img/2018/1.jpg"/>
+        <img class="imgs " src="./img/2018/2.jpg"/>
+      </div>
+      <span class="nian">2019年</span>
+      <div>
+        暂无
+      </div>
+      <span class="nian">2020年</span>
+      <div>
+        暂无
+      </div>
+    </div>
   </div>
 </template>
 
@@ -34,6 +75,33 @@ export default {
 
 <style lang="less" scoped>
 .CaoWangShi {
+  padding:20px;
+  display: flex;
+  .left{
+    width:200px;
+  }
+  .middle{
+    width:400px;
+    display: flex;
+    flex-direction: column; //column
+    align-items: center; //flex-start、flex-end
+    .one-life{
+      text-align: center;
+      font-size: 30px;
+      color:#1890ff;
+    }
+  }
+  .right{
+    .imgs{
+      width:300px;
+      height:300px;
+      margin-right: 10px;
+    }
+    .nian{
+      font-size: 20px;
+    }
+  }
+
 
 }
 </style>
