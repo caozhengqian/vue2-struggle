@@ -16,7 +16,7 @@
     </div>
     <div class="middle">
       <p class="one-life">一生总结</p>
-      <video style="width:300px;height:450px" controls=""  name="media"><source src="./video/caozhengqian.mp4" type="video/mp4"></video>
+      <video style="width:300px;height:450px" controls=""  name="media"><source src="./video/caowangshi.mp4" type="video/mp4"></video>
       <p class="one-life">一生技术总结教程（待开发）</p>
     </div>
     <div class="right">
