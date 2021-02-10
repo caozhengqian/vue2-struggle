@@ -13,11 +13,49 @@
       </a-steps>
     </div>
     <div class="middle">
-      <p class="one-life">一生总结</p>
+      <p class="one-life">年终总结</p>
       <video style="width:300px;height:450px" controls=""  name="media"><source src="./video/caozhengqian.mp4" type="video/mp4"></video>
       <p class="one-life">一生技术总结教程（待开发）</p>
     </div>
     <div class="right">
+      <span class="nian">1990年</span>
+      <div>
+        <img class="imgs" src="./img/1990/1.jpg"/>
+      </div>
+      <span class="nian">1991年</span>
+      <div>
+        <img class="imgs" src="./img/1991/1.jpg"/>
+        <img class="imgs" src="./img/1991/2.jpg"/>
+      </div>
+      <span class="nian">1992年</span>
+      <div>
+        <img class="imgs" src="./img/1992/1.jpg"/>
+      </div>
+      <span class="nian">1993年</span>
+      <div>
+        <img class="imgs" src="./img/1993/1.jpg"/>
+      </div>
+      <span class="nian">1995年</span>
+      <div>
+        <img class="imgs" src="./img/1995/1.jpg"/>
+        <img class="imgs" src="./img/1995/2.jpg"/>
+      </div>
+      <span class="nian">1996年</span>
+      <div>
+        <img class="imgs" src="./img/1996/1.jpg"/>
+        <img class="imgs" src="./img/1996/2.jpg"/>
+        <img class="imgs" src="./img/1996/3.jpg"/>
+        <img class="imgs" src="./img/1996/4.jpg"/>
+      </div>
+      <span class="nian">1998年</span>
+      <div>
+        <img class="imgs" src="./img/1998/1.jpg"/>
+      </div>
+      <span class="nian">2009年</span>
+      <div>
+        <img class="imgs" src="./img/2009/1.jpg"/>
+        <img class="imgs" src="./img/2009/2.jpg"/>
+      </div>
       <span class="nian">2016年</span>
       <div>
         <img class="imgs" src="./img/2016/1.jpg"/>
@@ -95,15 +133,20 @@ export default {
     }
   }
   .right{
+    max-width:650px;
+    max-height: 100vh;
+    overflow:scroll;
     .imgs{
+      display: inline;
       width:300px;
       height:300px;
       margin-right: 10px;
+
     }
     .nian{
-      font-size: 20px;
+      font-size: 40px;
+      color:red;
     }
   }
-
 }
 </style>
