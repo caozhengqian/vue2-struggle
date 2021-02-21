@@ -17,5 +17,11 @@ const life = [
         component: () =>
             import("../../../views/life/simpleLife/SimpleLife")
     },
+    {
+        name: "fuzisunLife",
+        path: "/life/fuzisunLife",
+        component: () =>
+            import("../../../views/life/fuzisunLife/FuzisunLife")
+    },
 ]
 export default life;
