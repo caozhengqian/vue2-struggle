@@ -1,9 +1,16 @@
 <template>
   <div class="Life">
     <p>简单的渲染、改变</p>
-    <button @click="toSimpleLife">渲染的生命周期</button>
-    <button @click="toFuzisunLife">父data改变，不传给子组件</button>
-    <button @click="toFuzisunLife">父data改变，传给子组件</button>
+    <button @click="toSimpleLife">
+      <span class="red">正常渲染</span>的生命周期
+    </button>
+    <br />
+    父<span class="red">data改变</span>
+    <button @click="toFuzisunLife">
+      <span class="blue">不传</span>给子组件
+    </button>
+    <span>、</span>
+    <button @click="toFuzisunLife"><span class="blue">传</span>给子组件</button>
     <p>接口延迟</p>
     <button @click="toFuzisunLife">父接口延迟改变</button>
     <button @click="toFuzisunLife">父接口延迟，</button>
