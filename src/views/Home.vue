@@ -2,9 +2,8 @@
   <div class="home">
     <button @click="toLife">生命周期</button>
     <button @click="howToIntegral">样式</button>
-    <button @click="toFamily">族谱</button>
 
-<!--    <Home1 />-->
+    <!--    <Home1 />-->
   </div>
 </template>
 
