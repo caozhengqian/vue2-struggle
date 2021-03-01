@@ -22,15 +22,12 @@ export default {
   },
   methods: {
     howToIntegral() {
-      console.log(`%c ${window}`, "color:red");
       this.$router.push({ name: "About" });
     },
     toLife() {
-      console.log(`%c ${window}`, "color:red");
       this.$router.push({ name: "lifeRouters" });
     },
     toFamily() {
-      console.log(`%c ${window}`, "color:red");
       this.$router.push({ name: "familyRouters" });
     }
   }

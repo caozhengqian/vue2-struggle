@@ -75,7 +75,6 @@ export default {
   created() {},
   methods: {
     _simpleLife() {
-      console.log(`%c ${window}`, "color:red");
       this.$router.push({ name: "simpleLife" });
     },
     _dataLifeNotToSon() {
