@@ -2,6 +2,7 @@
   <div class="SimpleLife">
     <p>正常的渲染周期</p>
     <Son />
+    <p>返回上一级，会执行destroy</p>
   </div>
 </template>
 
