@@ -10,6 +10,9 @@
     <p v-else>
       toSonUseTIf111
     </p>
+    <p class="blue">
+      不要尝试改变props的值，会报错，应该用本类的data接下来修改。
+    </p>
     <GrandSon1 />
   </div>
 </template>

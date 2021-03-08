@@ -9,11 +9,7 @@
     <!--    data改变对组件的影响-->
     父<span class="red">data改变</span>
     <button @click="_dataLifeNotToSon">
-      <span class="blue">不传</span>给子组件
-    </button>
-    <span>、</span>
-    <button @click="_dataLifeToSon">
-      <span class="blue">传</span>给子组件
+      <span class="blue">传/不传</span>给子组件
     </button>
     <br />
     <br />
