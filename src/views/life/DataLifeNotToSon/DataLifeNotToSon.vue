@@ -10,10 +10,33 @@
     <span>值：{{ toSon }}</span>
     <br />
     <button @click="_changeToSonUse">
-      <span class="blue">传</span>给子组件，子组件使用
+      <span class="blue">传</span>给子组件，子组件在
+      <span class="blue">script</span>标签中使用，
+      <span class="red">子组件</span><span class="blue">不</span
+      ><span class="red">更新</span>
     </button>
     <span>值：{{ toSonUse }}</span>
-    <Son1 :toSon="toSon" :toSonUse="toSonUse" />
+    <br />
+    <button @click="_changeToSonUseT">
+      <span class="blue">传</span>给子组件，子组件在
+      <span class="blue">template</span>标签中 <span class="blue">展示</span>，
+      <span class="red">子组件更新</span>
+    </button>
+    <span>值：{{ toSonUseT }}</span>
+    <br />
+    <button @click="_changeToSonUseTIf">
+      <span class="blue">传</span>给子组件，子组件在
+      <span class="blue">template</span>标签中
+      <span class="blue">if判断</span>，
+      <span class="red">子组件更新</span>
+    </button>
+    <span>值：{{ toSonUseTIf }}</span>
+    <Son1
+      :toSon="toSon"
+      :toSonUse="toSonUse"
+      :toSonUseT="toSonUseT"
+      :toSonUseTIf="toSonUseTIf"
+    />
   </div>
 </template>
 
@@ -33,9 +56,11 @@ export default {
   },
   data() {
     return {
-      name: "aaa",
-      toSon: "ccc",
-      toSonUse: "eee"
+      name: "name",
+      toSon: "toSon",
+      toSonUse: "toSonUse",
+      toSonUseT: "toSonUseT",
+      toSonUseTIf: "toSonUseTIf"
     };
   },
   beforeCreate() {
@@ -64,16 +89,43 @@ export default {
   },
   methods: {
     _changeData() {
-      this.name === "bbb" ? (this.name = "aaa") : (this.name = "bbb");
+      console.clear();
+      if (this.name === "name") {
+        this.name = "name111";
+      } else {
+        this.name = "name";
+      }
     },
     _changeToSon() {
-      this.toSon === "ccc" ? (this.toSon = "ddd") : (this.toSon = "ccc");
+      console.clear();
+      if (this.toSon === "toSon") {
+        this.toSon = "toSon111";
+      } else {
+        this.toSon = "toSon";
+      }
     },
     _changeToSonUse() {
-      if (this.toSonUse === "eee") {
-        this.toSonUse = "fff";
+      console.clear();
+      if (this.toSonUse === "toSonUse") {
+        this.toSonUse = "toSonUse111";
       } else {
-        this.toSonUse = "eee";
+        this.toSonUse = "toSonUse";
+      }
+    },
+    _changeToSonUseT() {
+      console.clear();
+      if (this.toSonUseT === "toSonUseT") {
+        this.toSonUseT = "toSonUseT111";
+      } else {
+        this.toSonUseT = "toSonUseT";
+      }
+    },
+    _changeToSonUseTIf() {
+      console.clear();
+      if (this.toSonUseTIf === "toSonUseTIf") {
+        this.toSonUseTIf = "toSonUseTIf111";
+      } else {
+        this.toSonUseTIf = "toSonUseTIf";
       }
     }
   }

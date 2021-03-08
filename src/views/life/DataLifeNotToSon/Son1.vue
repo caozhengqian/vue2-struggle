@@ -2,7 +2,13 @@
   <div class="Son1">
     <p>Son1</p>
     <p>
-      {{ toSonUse }}
+      {{ toSonUseT }}
+    </p>
+    <p v-if="toSonUseTIf === 'toSonUseTIf'">
+      toSonUseTI
+    </p>
+    <p v-else>
+      toSonUseTIf111
     </p>
     <GrandSon1 />
   </div>
@@ -16,7 +22,7 @@ export default {
     GrandSon1
   },
   name: "Son1",
-  props: ["toSonUse"],
+  props: ["toSonUse", "toSonUseT", "toSonUseTIf"],
   computed: {
     // ...mapState(["activityData"])
   },
@@ -26,15 +32,19 @@ export default {
     };
   },
   beforeCreate() {
+    // this.toSonUse = "123";
+    this.propsToSonUse = "123";
     console.log(`%c       Son1-->1、beforeCreate`, "color:#CE0000");
   },
   created() {
+    // this.toSonUse = "456";
     console.log(`%c       Son1-->2、created`, "color:#CE0000");
   },
   beforeMount() {
     console.log(`%c       Son1-->3、beforeMount`, "color:#CE0000");
   },
   mounted() {
+    this.propsToSonUse = "123";
     console.log(`%c       Son1-->4、mounted`, "color:#CE0000");
   },
   beforeUpdate() {
