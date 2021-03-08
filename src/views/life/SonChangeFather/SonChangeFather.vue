@@ -1,15 +1,17 @@
 <template>
   <div class="SonChangeFather">
     <p>SonChansgeFather</p>
+    <Son />
   </div>
 </template>
 
 <script>
 //import { mapState } from "vuex";
-//import All from "./comLife/All";
+import Son from "./Son";
+
 export default {
   components: {
-    //       All,
+    Son
   },
   name: "SonChangeFather",
   props: {
