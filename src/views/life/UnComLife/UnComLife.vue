@@ -1,17 +1,26 @@
 <template>
   <div class="UnComLife">
     <p>UnComLife</p>
-    <Son8/>
+    <button @click="_cIsShow"><span class="blue">切换组件</span></button>
+    <Son8 v-if="isShow" />
+    <Son10 v-else />
+    <br />
+    <br />
+    <br />
+    <Son8 v-show="isShow" />
+    <Son10 v-show="!isShow" />
   </div>
 </template>
 
 <script>
 //import { mapState } from "vuex";
 //import All from "./comLife/All";
-import Son8 from './Son8'
+import Son8 from "./Son8";
+import Son10 from "./Son10";
 export default {
   components: {
-          Son8,
+    Son8,
+    Son10
   },
   name: "UnComLife",
   props: {
@@ -21,7 +30,9 @@ export default {
     // ...mapState(["activityData"])
   },
   data() {
-    return {};
+    return {
+      isShow: true
+    };
   },
   beforeCreate() {
     console.log(`%cFather-->1、beforeCreate`, "color:#FF9797");
@@ -48,7 +59,13 @@ export default {
     console.log(`%cFather-->8、destroyed`, "color:#FF9797");
   },
   methods: {
-    aa() {}
+    _cIsShow() {
+      if (this.isShow === true) {
+        this.isShow = false;
+      } else {
+        this.isShow = true;
+      }
+    }
   }
 };
 </script>

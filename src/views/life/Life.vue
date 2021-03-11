@@ -48,6 +48,16 @@
     <button @click="_noStopLife">
       <span class="red">不中断</span>生命周期
     </button>
+    <br />
+    <br />
+    <button @click="_stopLife">
+      <span class="red">vuex</span>影响生命周期
+    </button>
+    <br />
+    <br />
+    <button @click="_stopLife">
+      <span class="red">大对象</span>影响生命周期
+    </button>
   </div>
 </template>
 
