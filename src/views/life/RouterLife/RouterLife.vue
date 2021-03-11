@@ -1,17 +1,19 @@
 <template>
   <div class="RouterLife">
     <p>RouterLife</p>
-    <Son5/>
+    <p>father</p>
+    <button @click="_routerTest"><span class="blue">跳转路由</span></button>
+    <Son5 />
   </div>
 </template>
 
 <script>
 //import { mapState } from "vuex";
 //import All from "./comLife/All";
-import Son5 from "./Son5"
+import Son5 from "./Son5";
 export default {
   components: {
-          Son5,
+    Son5
   },
   name: "RouterLife",
   props: {
@@ -48,7 +50,9 @@ export default {
     console.log(`%cFather-->8、destroyed`, "color:#FF9797");
   },
   methods: {
-    aa() {}
+    _routerTest() {
+      this.$router.push({ name: "testRouter" });
+    }
   }
 };
 </script>

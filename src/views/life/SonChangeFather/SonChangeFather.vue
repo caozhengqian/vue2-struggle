@@ -1,6 +1,7 @@
 <template>
   <div class="SonChangeFather">
     <p>SonChansgeFather</p>
+    <p>fatrher</p>
     <Son
       :fatherDataF.sync="fatherData"
       :fatherDataTemplateF.sync="fatherDataTemplate"
