@@ -72,6 +72,12 @@ const life = [
     name: "testRouter",
     path: "/life/RouterLife/TestRouter1",
     component: () => import("../../../views/life/RouterLife/TestRouter")
+  },
+  {
+    name: "testRouterTimeOut",
+    path: "/life/RouterLifeTimeOut/testRouterTimeOut",
+    component: () =>
+      import("../../../views/life/RouterLifeTimeOut/TestRouterTimeOut")
   }
 ];
 export default life;
