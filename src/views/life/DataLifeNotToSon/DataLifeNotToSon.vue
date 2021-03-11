@@ -1,6 +1,7 @@
 <template>
   <div class="DataLifeNotToSon">
     <p>DataLifeNotToSon</p>
+    <p>父组件的data传给子组件使用father</p>
     <button @click="_changeData"><span class="blue">不传</span>给子组件</button>
     <span>值：{{ name }}</span>
     <br />

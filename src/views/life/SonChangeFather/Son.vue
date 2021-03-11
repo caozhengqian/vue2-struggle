@@ -4,14 +4,14 @@
     <button @click="_cFatherData">
       <span class="blue">改变</span>
       父组件的data
-      <span class="blue">父组件未在template</span>
+      <span class="blue">父组件<span class="red">未在</span>template</span>
       上使用 父组件<span class="red">不更新</span>
     </button>
     <br />
     <button @click="_cFatherDataTem">
       <span class="blue">改变</span>
       父组件的data
-      <span class="blue">父组件在template</span>
+      <span class="blue">父组件<span class="red">在</span>template</span>
       上使用 父组件<span class="red">更新</span>
     </button>
     <GrandSon />
