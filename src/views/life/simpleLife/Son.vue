@@ -13,9 +13,7 @@ export default {
     GrandSon
   },
   name: "Son",
-  props: {
-    //  msg: String
-  },
+  props: ["data"],
   computed: {
     // ...mapState(["activityData"])
   },
@@ -23,6 +21,7 @@ export default {
     return {};
   },
   beforeCreate() {
+    // console.log(`%c ${this.data}`, "color:red");//   beforeCreated无法获取props的值
     console.log(`%c       Son-->1、beforeCreate`, "color:#CE0000");
   },
   created() {

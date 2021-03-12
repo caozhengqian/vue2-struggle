@@ -1,7 +1,8 @@
 <template>
   <div class="SimpleLife">
     <p>正常的渲染周期</p>
-    <Son />
+    <p class="blue">beforeCreated无法获取props的值</p>
+    <Son :data="data" />
     <p>返回上一级，会执行destroy</p>
   </div>
 </template>
@@ -21,7 +22,9 @@ export default {
     // ...mapState(["activityData"])
   },
   data() {
-    return {};
+    return {
+      data: "abc"
+    };
   },
 
   // console.log(`%c 淡红FF9797-->beforeCreate`, "color:#FF9797");
