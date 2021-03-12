@@ -1,17 +1,18 @@
 <template>
   <div class="StopLife">
     <p>StopLife</p>
-    <Son7/>
+    <Son7 />
   </div>
 </template>
 
 <script>
 //import { mapState } from "vuex";
 //import All from "./comLife/All";
-import Son7 from './Son7';
+import { home } from "../../../api/request";
+import Son7 from "./Son7";
 export default {
   components: {
-          Son7,
+    Son7
   },
   name: "StopLife",
   props: {
@@ -26,7 +27,10 @@ export default {
   beforeCreate() {
     console.log(`%cFather-->1、beforeCreate`, "color:#FF9797");
   },
-  created() {
+  async created() {
+    await home(5000).then(() => {
+      console.log(`%c await Father-->2、created`, "color:#FF9797");
+    });
     console.log(`%cFather-->2、created`, "color:#FF9797");
   },
   beforeMount() {

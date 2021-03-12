@@ -8,6 +8,7 @@
 <script>
 //import { mapState } from "vuex";
 import GrandSon7 from "./GrandSon7";
+import { home } from "../../../api/request";
 export default {
   components: {
     GrandSon7
@@ -25,7 +26,10 @@ export default {
   beforeCreate() {
     console.log(`%c       Son-->1、beforeCreate`, "color:#CE0000");
   },
-  created() {
+  async created() {
+    await home(5000).then(() => {
+      console.log(`%c await       Son-->2、created`, "color:#CE0000");
+    });
     console.log(`%c       Son-->2、created`, "color:#CE0000");
   },
   beforeMount() {
