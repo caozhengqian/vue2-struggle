@@ -44,7 +44,9 @@
     <button @click="_forLife"><span class="red">循环后</span>的生命周期</button>
     <br />
     <br />
-    <button @click="_stopLife"><span class="red">中断</span>生命周期</button>、
+    <button @click="_stopLife">
+      <span class="red">await中断</span>生命周期</button
+    >、
     <button @click="_noStopLife">
       <span class="red">不中断</span>生命周期
     </button>
