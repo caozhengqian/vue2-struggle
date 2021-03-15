@@ -37,10 +37,21 @@ const life = [
     component: () => import("../../../views/life/RouterLife/RouterLife")
   },
   {
+    name: "testRouter",
+    path: "/life/RouterLife/TestRouter1",
+    component: () => import("../../../views/life/RouterLife/TestRouter")
+  },
+  {
     name: "routerLifeTimeOut",
     path: "/life/RouterLifeTimeOut",
     component: () =>
       import("../../../views/life/RouterLifeTimeOut/RouterLifeTimeOut")
+  },
+  {
+    name: "testRouterTimeOut",
+    path: "/life/RouterLifeTimeOut/testRouterTimeOut",
+    component: () =>
+      import("../../../views/life/RouterLifeTimeOut/TestRouterTimeOut")
   },
   {
     name: "unComLife",
@@ -69,15 +80,14 @@ const life = [
     component: () => import("../../../views/life/NoStopLife/NoStopLife")
   },
   {
-    name: "testRouter",
-    path: "/life/RouterLife/TestRouter1",
-    component: () => import("../../../views/life/RouterLife/TestRouter")
+    name: "vuexRouter",
+    path: "/life/VuexLife",
+    component: () => import("../../../views/life/VuexLife/VuexLife")
   },
   {
-    name: "testRouterTimeOut",
-    path: "/life/RouterLifeTimeOut/testRouterTimeOut",
-    component: () =>
-      import("../../../views/life/RouterLifeTimeOut/TestRouterTimeOut")
+    name: "bigObjRouter",
+    path: "/life/bigObj",
+    component: () => import("../../../views/life/BigObj/BigObj")
   }
 ];
 export default life;

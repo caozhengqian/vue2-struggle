@@ -52,12 +52,12 @@
     </button>
     <br />
     <br />
-    <button @click="_stopLife">
+    <button @click="_vuexRouter">
       <span class="red">vuex</span>影响生命周期
     </button>
     <br />
     <br />
-    <button @click="_stopLife">
+    <button @click="_bigObjRouter">
       <span class="red">大对象</span>影响生命周期
     </button>
   </div>
@@ -114,6 +114,12 @@ export default {
     },
     _noStopLife() {
       this.$router.push({ name: "noStopLife" });
+    },
+    _vuexRouter() {
+      this.$router.push({ name: "vuexRouter" });
+    },
+    _bigObjRouter() {
+      this.$router.push({ name: "bigObjRouter" });
     }
   }
 };
