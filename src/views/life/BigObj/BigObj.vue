@@ -2,25 +2,31 @@
   <div class="BigObj">
     <p>BigObj</p>
     <button @click="_cStr">改变<span class="blue">string</span></button>
-    {{str}}
-    <br/>
-    <br/>
+    {{ str }}
+    <br />
+    <br />
     <button @click="_cList1">改变<span class="blue">list</span></button>
     <span class="red">this.list2 = this.list.push('c');每次都更新</span>
-    <br/>
-    {{JSON.stringify(list)}}
-    <br/>
-    <br/>
+    <br />
+    {{ JSON.stringify(list) }}
+    <br />
+    <br />
     <button @click="_cListPush">改变<span class="blue">list2</span></button>
-    <span class="red">this.list2.<span class="blue">push</span>('c');每次都更新</span>
-    <br/>
-    {{JSON.stringify(list2)}}
-    <br/>
-    <br/>
-    <button @click="_cListReverse">改变<span class="blue">listReverse</span></button>
-    <span class="red">this.list2.<span class="blue">reverse</span>;每次都更新</span>
-    <br/>
-    {{JSON.stringify(listReverse)}}
+    <span class="red"
+      >this.list2.<span class="blue">push</span>('c');每次都更新</span
+    >
+    <br />
+    {{ JSON.stringify(list2) }}
+    <br />
+    <br />
+    <button @click="_cListReverse">
+      改变<span class="blue">listReverse</span>
+    </button>
+    <span class="red"
+      >this.list2.<span class="blue">reverse</span>;每次都更新</span
+    >
+    <br />
+    {{ JSON.stringify(listReverse) }}
     <Son13 />
   </div>
 </template>
@@ -80,13 +86,13 @@ export default {
       this.str === "aaa" ? (this.str = "bbb") : (this.str = "aaa");
     },
     _cList1() {
-      this.list = ["b","c"];
+      this.list = ["b", "c"];
     },
     _cListPush() {
-      this.list2.push('c')
+      this.list2.push("c");
     },
     _cListReverse() {
-      this.listReverse.reverse()
+      this.listReverse.reverse();
     }
   }
 };
