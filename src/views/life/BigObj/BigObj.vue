@@ -6,7 +6,7 @@
     <br />
     <br />
     <button @click="_cList1">改变<span class="blue">list</span></button>
-    <span class="red">this.list2 = this.list.push('c');每次都更新</span>
+    <span class="red">this.list = <span class="blue">["b", "c"]</span>每次都更新,虽然<span class="blue">值是一样的</span></span>
     <br />
     {{ JSON.stringify(list) }}
     <br />
@@ -27,6 +27,46 @@
     >
     <br />
     {{ JSON.stringify(listReverse) }}
+    <br />
+    <br />
+    <button @click="_cObj">
+      改变<span class="blue">Obj</span>
+    </button>
+    <span class="red">
+      this.obj<span class="blue">.aKey</span>='AAVal' 改变值的时候更新一次，<span class="blue">再次赋值不改变</span>
+    </span>
+    <br />
+    {{ JSON.stringify(obj) }}
+    <br />
+    <br />
+    <button @click="_cObj1">
+      改变<span class="blue">Obj</span>
+    </button>
+    <span class="red">
+      this.obj=<span class="blue">{ aKey: "aVal", bKey: "bVal" }</span> 每次都更新，虽然<span class="blue">值是一样的</span>
+    </span>
+    <br />
+    {{ JSON.stringify(obj) }}
+    <br />
+    <br />
+    <button @click="_cObjInList">
+      改变<span class="blue">objInList</span>
+    </button>
+    <span class="red">
+      this.objInList= <span class="blue">["a", { aKey: "aVal" }]</span> 每次都更新，虽然<span class="blue">值是一样的</span>
+    </span>
+    <br />
+    {{ JSON.stringify(objInList) }}
+    <br />
+    <br />
+    <button @click="_cListInObj">
+      改变<span class="blue">listInObj</span>
+    </button>
+    <span class="red">
+      this.listInObj= <span class="blue">{ a: ["b", "c"] }</span> 每次都更新，虽然<span class="blue">值是一样的</span>
+    </span>
+    <br />
+    {{ JSON.stringify(listInObj) }}
     <Son13 />
   </div>
 </template>
@@ -93,6 +133,22 @@ export default {
     },
     _cListReverse() {
       this.listReverse.reverse();
+    },
+    _cObj() {
+      this.obj.aKey='AAVal'
+    },
+    _cObj1() {
+      this.obj={ aKey: "aVal", bKey: "bVal" }
+    },
+    _cObjInList() {
+      // objInList: ["a", { aKey: "aVal" }],
+      // listInObj: { a: ["b", "c"] }
+      this.objInList= ["a", { aKey: "aVal" }]
+    },
+    _cListInObj() {
+      // objInList: ["a", { aKey: "aVal" }],
+      // listInObj: { a: ["b", "c"] }
+      this.listInObj= { a: ["b", "c"] }
     }
   }
 };
