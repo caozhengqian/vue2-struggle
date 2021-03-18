@@ -1,6 +1,11 @@
 <template>
   <div class="VuexLife">
     <p>VuexLife</p>
+    <br />
+    <br />
+    <button @click="_cStr">
+      改变<span class="blue">store的str</span>
+    </button>
     {{str}}
     <Son12 />
   </div>
@@ -51,7 +56,9 @@ export default {
     console.log(`%cFather-->8、destroyed`, "color:#FF9797");
   },
   methods: {
-    aa() {}
+    _cStr() {
+      this.$store.dispatch("cStr", 'bbb');
+    }
   }
 };
 </script>
