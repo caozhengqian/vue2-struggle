@@ -1,12 +1,13 @@
 <template>
   <div class="VuexLife">
     <p>VuexLife</p>
+    {{str}}
     <Son12 />
   </div>
 </template>
 
 <script>
-//import { mapState } from "vuex";
+import { mapState } from "vuex";
 //import All from "./comLife/All";
 import Son12 from "./Son12";
 export default {
@@ -18,7 +19,9 @@ export default {
     //  msg: String
   },
   computed: {
-    // ...mapState(["activityData"])
+    ...mapState({
+      str: store => store.lifeStore.str,
+    })
   },
   data() {
     return {};

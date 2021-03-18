@@ -14,12 +14,16 @@ const state = () => ({
 const actions = {
   cStr({ commit, state }, params) {
     console.log(`%c ${state}`, "color:red");
-    commit("getNewProducts", params);
+    commit("cStr", params);
   }
 };
 
 // mutations
-const mutations = {};
+const mutations = {
+  cStr(state, payload) {
+    state.str = payload
+  },
+};
 
 export default {
   state,
