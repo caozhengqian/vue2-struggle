@@ -60,6 +60,11 @@
     <button @click="_bigObjRouter">
       <span class="red">大对象</span>影响生命周期
     </button>
+    <br />
+    <br />
+    <button @click="_nextTickRouter">
+      <span class="red">nextTick</span>什么时候执行
+    </button>
   </div>
 </template>
 
@@ -120,6 +125,9 @@ export default {
     },
     _bigObjRouter() {
       this.$router.push({ name: "bigObjRouter" });
+    },
+    _nextTickRouter() {
+      this.$router.push({ name: "nextTickRouter" });
     }
   }
 };

@@ -88,6 +88,11 @@ const life = [
     name: "bigObjRouter",
     path: "/life/bigObj",
     component: () => import("../../../views/life/BigObj/BigObj")
+  },
+  {
+    name: "nextTickRouter",
+    path: "/life/nextTick",
+    component: () => import("../../../views/life/NextTick/NextTick")
   }
 ];
 export default life;
