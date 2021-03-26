@@ -1,12 +1,18 @@
 <template>
   <div class="VuexLife">
     <p>VuexLife</p>
+    <br />
+    <br />
+    <button @click="_cStr">
+      改变<span class="blue">store的str</span>
+    </button>
+    {{str}}
     <Son12 />
   </div>
 </template>
 
 <script>
-//import { mapState } from "vuex";
+import { mapState } from "vuex";
 //import All from "./comLife/All";
 import Son12 from "./Son12";
 export default {
@@ -18,7 +24,9 @@ export default {
     //  msg: String
   },
   computed: {
-    // ...mapState(["activityData"])
+    ...mapState({
+      str: store => store.lifeStore.str,
+    })
   },
   data() {
     return {};
@@ -48,7 +56,9 @@ export default {
     console.log(`%cFather-->8、destroyed`, "color:#FF9797");
   },
   methods: {
-    aa() {}
+    _cStr() {
+      this.$store.dispatch("cStr", 'bbb');
+    }
   }
 };
 </script>
