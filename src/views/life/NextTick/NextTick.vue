@@ -6,7 +6,6 @@
     <p ref="test">{{ test }}</p>
     <p>方法里的nextTick会先于update执行</p>
     <br />
-    <br />
     <button @click="_test1">改变test的值</button>
     <p ref="test1">{{ test1 }}</p>
     <p>
@@ -15,14 +14,18 @@
     <p>cTest1 nextTick:{{ cTest1 }}</p>
     <p>cTest2:{{ cTest2 }}</p>
     <br />
-    <br />
-    <button @click="_test2"><span class="red">延迟</span>改变test的值</button>
+    <button @click="_test2"><span class="red">延迟</span>改变test的值</button
+    ><span>有延迟，nextTick就不能在dom渲染后执行了。</span>
     <p ref="test2">{{ test2 }}</p>
-    <p>
-      有延迟，nextTick就不能在dom渲染后执行了。
-    </p>
     <p>cTest3 nextTick:{{ cTest3 }}</p>
     <p>cTest4:{{ cTest4 }}</p>
+    <br />
+    <button @click="_testWatch"><span class="red">watch</span>后的值</button>
+    <span>先执行watch，再执行nextTick</span>
+    <p>{{ testWatch }}</p>
+    watch改变的值：<span ref="testWatchChange">{{ testWatchChange }}</span>
+    <p>ctestWatch1 nextTick:{{ ctestWatch1 }}</p>
+    <p>ctestWatch2:{{ ctestWatch2 }}</p>
   </div>
 </template>
 
@@ -41,6 +44,11 @@ export default {
   computed: {
     // ...mapState(["activityData"])
   },
+  watch: {
+    testWatch: function() {
+      this.testWatchChange = this.testWatchChange + "a";
+    }
+  },
   data() {
     return {
       test: true,
@@ -49,7 +57,11 @@ export default {
       cTest1: "",
       cTest2: "",
       cTest3: "",
-      cTest4: ""
+      cTest4: "",
+      testWatch: true,
+      ctestWatch1: "",
+      ctestWatch2: "",
+      testWatchChange: ""
     };
   },
   created() {
@@ -131,6 +143,24 @@ export default {
         "color:red"
       );
       this.cTest4 = this.$refs.test2.innerHTML;
+    },
+    _testWatch() {
+      this.testWatch === true
+        ? (this.testWatch = false)
+        : (this.testWatch = true);
+
+      this.$nextTick(() => {
+        console.log(
+          `%c 我在_test1的nextTick:${this.$refs.testWatchChange.innerHTML}`,
+          "color:red"
+        );
+        this.ctestWatch1 = this.$refs.testWatchChange.innerHTML;
+      });
+      console.log(
+        `%c 我不在_test1的nextTick:${this.$refs.testWatchChange.innerHTML}`,
+        "color:red"
+      );
+      this.ctestWatch2 = this.$refs.testWatchChange.innerHTML;
     }
   }
 };
