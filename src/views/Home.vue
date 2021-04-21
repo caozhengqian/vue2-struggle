@@ -2,6 +2,7 @@
   <div class="home">
     <button @click="toLife">生命周期</button>
     <button @click="howToIntegral">样式</button>
+    <button @click="_vue2">vue2.0功能</button>
 
     <!--    <Home1 />-->
   </div>
@@ -29,6 +30,9 @@ export default {
     },
     toFamily() {
       this.$router.push({ name: "familyRouters" });
+    },
+    _vue2() {
+      this.$router.push({ name: "vue2Routername" });
     }
   }
 };

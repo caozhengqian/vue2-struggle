@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import lifeRouters from "./module/lifeRouters/lifeRouters";
+import vue2Routers from "./module/vue2/vue2Routers";
 Vue.use(VueRouter);
 
 const routes = [
@@ -16,7 +17,8 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
   },
-  ...lifeRouters
+  ...lifeRouters,
+  ...vue2Routers
 ];
 
 const router = new VueRouter({
