@@ -28,10 +28,11 @@ export default {
     console.log(`%cFather-->1、beforeCreate`, "color:#FF9797");
   },
   async created() {
+    console.log(`%c Father-->2、created await前面`, "color:#FF9797");
     await home(5000).then(() => {
       console.log(`%c await Father-->2、created`, "color:#FF9797");
     });
-    console.log(`%cFather-->2、created`, "color:#FF9797");
+    console.log(`%c Father-->2、created await后面`, "color:#FF9797");
   },
   beforeMount() {
     console.log(`%cFather-->3、beforeMount`, "color:#FF9797");
