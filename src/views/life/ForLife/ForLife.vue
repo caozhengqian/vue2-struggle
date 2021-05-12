@@ -25,8 +25,7 @@ export default {
   },
   data() {
     return {
-      list1: ["a", "b"],
-      list2: ["b", "c"]
+      list1: ["a", "b"]
     };
   },
   beforeCreate() {
